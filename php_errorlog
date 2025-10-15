@@ -1,0 +1,60 @@
+[19-Apr-2023 06:58:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function sendMail() in /home/customer/www/gauravb59.sg-host.com/public_html/contact-page.php:93
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/contact-page.php on line 93
+[22-May-2023 10:14:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/customer/www/gauravb59.sg-host.com/public_html/plans-single.php on line 336
+[25-May-2023 10:29:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getShopProductsByBrand() in /home/customer/www/gauravb59.sg-host.com/public_html/get_product_brand_ajax.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/get_product_brand_ajax.php on line 14
+[25-May-2023 10:30:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getShopProductsByBrand() in /home/customer/www/gauravb59.sg-host.com/public_html/get_product_brand_ajax.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/get_product_brand_ajax.php on line 14
+[02-Nov-2023 03:49:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 88
+[02-Nov-2023 03:49:34 UTC] PHP Notice:  Undefined variable: con in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 94
+[02-Nov-2023 03:49:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 94
+[02-Nov-2023 03:54:30 UTC] PHP Parse error:  syntax error, unexpected '';' (T_CONSTANT_ENCAPSED_STRING) in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 90
+[02-Nov-2023 03:55:13 UTC] PHP Notice:  Undefined variable: con in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 95
+[02-Nov-2023 03:55:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 95
+[02-Nov-2023 03:57:25 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 95
+[02-Nov-2023 03:57:52 UTC] PHP Notice:  Undefined variable: referrer in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 101
+[02-Nov-2023 03:57:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/gauravb59.sg-host.com/public_html/registration.php:68) in /home/customer/www/gauravb59.sg-host.com/public_html/registration.php on line 104
+[02-Nov-2023 04:22:19 UTC] PHP Notice:  Undefined variable: con in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 28
+[02-Nov-2023 04:22:19 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 28
+[02-Nov-2023 04:22:19 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 32
+[02-Nov-2023 04:22:19 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 34
+[02-Nov-2023 04:22:19 UTC] PHP Notice:  Undefined variable: con in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 84
+[02-Nov-2023 04:22:19 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 84
+[02-Nov-2023 04:22:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/gauravb59.sg-host.com/public_html/login.php:28) in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 87
+[02-Nov-2023 04:25:59 UTC] PHP Notice:  Constant BASE_URL already defined in /home/customer/www/gauravb59.sg-host.com/public_html/shop_includes/config.php on line 7
+[02-Nov-2023 04:25:59 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 34
+[02-Nov-2023 04:25:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/gauravb59.sg-host.com/public_html/shop_includes/config.php:7) in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 87
+[02-Nov-2023 04:26:15 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 34
+[02-Nov-2023 04:26:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/gauravb59.sg-host.com/public_html/login.php:34) in /home/customer/www/gauravb59.sg-host.com/public_html/login.php on line 87
+[11-Sep-2025 03:45:40 UTC] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/gauravb59.sg-host.com/public_html/my-profile.php on line 7
+[09-Oct-2025 06:09:31 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php:6
+Stack trace:
+#0 /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php(6): mysqli_query(NULL, 'SELECT  email F...')
+#1 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php on line 6
+[09-Oct-2025 06:09:48 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php:6
+Stack trace:
+#0 /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php(6): mysqli_query(NULL, 'SELECT  email F...')
+#1 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php on line 6
+[09-Oct-2025 06:09:54 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php:6
+Stack trace:
+#0 /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php(6): mysqli_query(NULL, 'SELECT  email F...')
+#1 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php on line 6
+[09-Oct-2025 06:15:35 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php:6
+Stack trace:
+#0 /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php(6): mysqli_query(NULL, 'SELECT  email F...')
+#1 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php on line 6
+[09-Oct-2025 06:17:25 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php:6
+Stack trace:
+#0 /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php(6): mysqli_query(NULL, 'SELECT  email F...')
+#1 {main}
+  thrown in /home/customer/www/gauravb59.sg-host.com/public_html/shop-check_availability.php on line 6

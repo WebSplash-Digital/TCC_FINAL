@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+
+      <li class="logo"><a href="#"><img src="http://localhost/tcc/images/logo.png" alt=""></a></li>
+      <li class="item"><a href="#">Home</a></li>
+      <li class="item"><a href="#">Services</a></li>
+      <li class="item"><a href="#">Shop</a></li>
+      <li class="item"><a href="#">Promos</a></li>
+      <li class="item"><a href="#">Careers</a></li>
+      <li class="item has-submenu">
+        <a tabindex="0">Help</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#">Kalianet Usage</a></li>
+          <li class="subitem"><a href="#">FAQ</a></li>
+          <li class="subitem"><a href="#">Web Mail</a></li>
+        </ul>
+      </li>
+      <li class="item has-submenu">
+        <a tabindex="0">About</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#">About Us</a></li>
+          <li class="subitem"><a href="#">Latest News</a></li>
+        </ul>
+      </li>
+      <li class="item"><a href="#">Contact</a></li>
+      <div class="menu_icons">
+        <li class="item button tcc_search tcc_mob_li"><a href="#search"><span class="material-symbols-outlined">search</span></a></li>
+        <li class="item button tcc_mob_li"><a href="#"><span class="material-symbols-outlined">favorite</span></a></li>
+        <li class="item button tcc_mob_li"><a href="#"><span class="material-symbols-outlined">shopping_bag</span></a></li>
+        <li class="item button"><a href="#">Log In</a></li>
+        <li class="item button secondary"><a href="#">Sign Up</a></li>
+        <li class="item button">
+          <div class="sec-center"> 	
+            <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+            <label class="for-dropdown" for="dropdown">My Account<span class="material-symbols-outlined uil"> keyboard_arrow_down </span></label>
+            <div class="section-dropdown"> 
+              <a href="#"><span class="material-symbols-outlined"> work </span> <span>Job Dashboard</span></a>
+              <!--<input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub"/>
+              <label class="for-dropdown-sub" for="dropdown-sub">Dropdown Sub <i class="uil uil-plus"></i></label>
+               <div class="section-dropdown-sub"> 
+                <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
+                <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
+              </div> -->
+              <a href="#"><span class="material-symbols-outlined"> local_mall </span><span>Shop Dashboard</span></a>
+              <a href="#"><span class="material-symbols-outlined"> logout </span><span>Logout</span></a>
+            </div>
+          </div>
+        </li>
+
+
+      </div>
+
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Search Form -->
+  <div id="search">
+    <span class="close">x</span>
+    <form role="search" id="searchform" action="/search" method="get">
+      <input value="" name="q" type="search" placeholder="type to search" />
+    </form>
+  </div>
+
+
+
+
+  <style>
+.section-dropdown a{
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 5px !important;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+.dropdown:checked + label,
+.dropdown:not(:checked) + label{
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  height: 50px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 160px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #0b0984;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 12px 35px 0 rgba(255,235,167,.15);
+}
+.dark-light:checked ~ .sec-center .for-dropdown{
+  background-color: #102770;
+  color: #ffeba7;
+  box-shadow: 0 12px 35px 0 rgba(16,39,112,.25);
+}
+.dropdown:checked + label:before,
+.dropdown:not(:checked) + label:before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  cursor: auto;
+  pointer-events: none;
+}
+.dropdown:checked + label:before{
+  pointer-events: auto;
+}
+.dropdown:not(:checked) + label .uil {
+  font-size: 24px;
+  margin-left: 10px;
+  transition: transform 200ms linear;
+}
+.dropdown:checked + label .uil {
+  transform: rotate(180deg);
+  font-size: 24px;
+  margin-left: 10px;
+  transition: transform 200ms linear;
+}
+.section-dropdown {
+  position: absolute;
+  padding: 5px;
+  background-color: #fff;
+  /* top: 70px; */
+  left: 0;
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 10px 14px 0 rgba(9,9,12,0.1);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 200ms linear;
+}
+.dark-light:checked ~ .sec-center .section-dropdown {
+  background-color: #fff;
+  box-shadow: 0 14px 35px 0 rgba(9,9,12,0.15);
+}
+.dropdown:checked ~ .section-dropdown{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.section-dropdown:before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  content: '';
+  display: block;
+  z-index: 1;
+}
+.section-dropdown:after {
+  position: absolute;
+  top: -7px;
+  left: 30px;
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent; 
+  border-bottom: 8px solid #fff;
+  content: '';
+  display: block;
+  z-index: 2;
+  transition: all 200ms linear;
+}
+.dark-light:checked ~ .sec-center .section-dropdown:after {
+  border-bottom: 8px solid #fff;
+}
+
+/* a {
+  position: relative;
+  color: #fff;
+  transition: all 200ms linear;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin: 2px 0;
+  text-align: left;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+    -ms-flex-pack: distribute;
+}
+.dark-light:checked ~ .sec-center .section-dropdown a {
+  color: #102770;
+}
+a:hover {
+  color: #102770;
+  background-color: #ffeba7;
+}
+.dark-light:checked ~ .sec-center .section-dropdown a:hover {
+  color: #ffeba7;
+  background-color: #102770;
+} */
+.section-dropdown a:hover {
+  color: #fff;
+  background-color: #102770;
+}
+.section-dropdown a{
+  transition: all 200ms linear;
+}
+a .uil {
+  font-size: 22px;
+}
+.dropdown-sub:checked + label,
+.dropdown-sub:not(:checked) + label{
+  position: relative;
+  color: #fff;
+  transition: all 200ms linear;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  text-align: left;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+    -ms-flex-pack: distribute;
+    cursor: pointer;
+}
+.dropdown-sub:checked + label .uil,
+.dropdown-sub:not(:checked) + label .uil{
+  font-size: 22px;
+}
+.dropdown-sub:not(:checked) + label .uil {
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label .uil {
+  transform: rotate(135deg);
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label:hover,
+.dropdown-sub:not(:checked) + label:hover{
+  color: #102770;
+  background-color: #ffeba7;
+}
+.dark-light:checked ~ .sec-center .section-dropdown .for-dropdown-sub{
+  color: #102770;
+}
+.dark-light:checked ~ .sec-center .section-dropdown .for-dropdown-sub:hover{
+  color: #ffeba7;
+  background-color: #102770;
+}
+
+.section-dropdown-sub {
+  position: relative;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  max-height: 0;
+  padding-left: 10px;
+  padding-right: 3px;
+  overflow: hidden;
+  transition: all 200ms linear;
+}
+.dropdown-sub:checked ~ .section-dropdown-sub{
+  pointer-events: auto;
+  opacity: 1;
+  max-height: 999px;
+}
+.section-dropdown-sub a {
+  font-size: 14px;
+}
+.section-dropdown-sub a .uil {
+  font-size: 20px;
+}
+    .menu_icons {
+      display: flex;
+      width: 100%;
+      order: 1;
+    }
+
+    #search {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-transform: translate(0px, -100%) scale(0, 0);
+      -moz-transform: translate(0px, -100%) scale(0, 0);
+      -ms-transform: translate(0px, -100%) scale(0, 0);
+      -o-transform: translate(0px, -100%) scale(0, 0);
+      transform: translate(0px, -100%) scale(0, 0);
+      opacity: 0;
+      display: none;
+    }
+
+    #search.open {
+      -webkit-transform: translate(0px, 0px) scale(1, 1);
+      -moz-transform: translate(0px, 0px) scale(1, 1);
+      -ms-transform: translate(0px, 0px) scale(1, 1);
+      -o-transform: translate(0px, 0px) scale(1, 1);
+      transform: translate(0px, 0px) scale(1, 1);
+      opacity: 1;
+      z-index: 106;
+      display: block;
+    }
+
+    #search input[type="search"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #111;
+      background: #fff;
+      border-top: 1px solid rgba(255, 255, 255, .8);
+      border-bottom: 2px solid rgba(255, 255, 255, .5);
+      border-left: 0px solid transparent;
+      border-right: 0px solid transparent;
+      font-size: 40px;
+      font-weight: 300;
+      text-align: center;
+      outline: none;
+      padding: 10px;
+    }
+
+    #search .close {
+      text-align: center;
+      position: fixed;
+      top: 18px;
+      right: 10px;
+      opacity: 1;
+      font-size: 23px;
+      color: #fff;
+      z-index: 999999999999;
+      background-color: #5b5b5b;
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+    }
+
+    #search .close:hover {
+      color: #000;
+      cursor: pointer;
+    }
+
+    /* Basic styling */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    nav {
+      background: #fff;
+      padding: 0 15px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    li.item a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .menu,
+    .submenu {
+      list-style-type: none;
+    }
+
+    .logo {
+      font-size: 20px;
+      padding: 7.5px 10px 7.5px 0;
+      width: 50%;
+    }
+
+    .item {
+      padding: 10px;
+    }
+
+    .item.button {
+      padding: 9px 5px;
+    }
+
+    .item:not(.button) a:hover,
+    .item a:hover::after {
+      color: #ccc;
+    }
+
+    /* Mobile menu */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 15px 5px;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .menu li.subitem a {
+      padding: 15px;
+    }
+
+    .toggle {
+      order: 1;
+      font-size: 20px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .item.button {
+      order: 2;
+    }
+
+    .item {
+      order: 3;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+
+    .active .item {
+      display: block;
+    }
+
+    /* Submenu up from mobile screens */
+    .submenu {
+      display: none;
+    }
+
+    .submenu-active .submenu {
+      display: block;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    .has-submenu i {
+      font-size: 12px;
+    }
+
+    .has-submenu>a::after {
+      font-family: "Font Awesome 5 Free";
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 900;
+      content: "\f078";
+      color: #111;
+      padding-left: 5px;
+    }
+
+    .subitem a {
+      padding: 10px 15px;
+    }
+
+    .submenu-active {
+      background-color: #fff;
+      border-radius: 3px;
+    }
+
+    .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+    }
+
+    /* Tablet menu
+    @media all and (min-width: 1024px) {
+      .menu {
+        justify-content: center;
+      }
+      .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+      }
+      .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+      }
+      .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+      }
+ 
+      .button.secondary {
+        border: 0;
+      }
+      .button.secondary a {
+        background: transparent;
+      }
+      .button a:hover {
+        text-decoration: none;
+      }
+      .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+      }
+    } */
+    /* Desktop menu */
+    @media all and (min-width: 1200px) {
+      .tcc_search {
+        margin-left: 50px;
+      }
+
+      .menu {
+        align-items: center;
+        flex-wrap: nowrap;
+        background: none;
+      }
+
+      .logo {
+        order: 0;
+      }
+
+      .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+      }
+
+      .button {
+        order: 2;
+      }
+
+      .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 68px;
+        background: #fff;
+        width: max-content;
+      }
+
+      .toggle {
+        display: none;
+      }
+
+      .submenu-active {
+        border-radius: 0;
+      }
+    }
+
+    li.logo img {
+      width: 100%;
+      max-width: 210px;
+    }
+
+    ul.menu {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+
+
+    .container-search {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      line-height: 45px;
+    }
+
+    li#searchicon {
+      height: 45px;
+      line-height: 45px;
+      width: 42px;
+      background: #e7edfb;
+      color: #316de1;
+      text-align: center;
+      float: right;
+      cursor: pointer;
+    }
+
+    #searchicon:hover {
+      color: #325697;
+    }
+
+    #searchbar {
+      display: none;
+      width: calc(100% - 42px);
+      text-align: center;
+      height: auto;
+      background: rgba(255, 255, 255, .0);
+      position: absolute;
+      overflow: hidden;
+      z-index: 9999;
+      left: 0;
+      top: -47px;
+      /* hightlight - delete if you want */
+      box-shadow: 0 0 5px 0 #e7edfb, 0 2px 5px 0 #e7edfb;
+    }
+
+    #searchBox {
+      -webkit-appearance: none;
+      border: 0;
+      background: rgba(255, 255, 255, .8);
+      width: 80%;
+      line-height: 45px;
+      color: #9ba8bb;
+      outline: none;
+    }
+
+    #searchButton {
+      width: 10%;
+      background: #316de1;
+      color: #ecf4ff;
+      line-height: 45px;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</body>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+  const toggle = document.querySelector(".toggle");
+  const menu = document.querySelector(".menu");
+  const items = document.querySelectorAll(".item");
+
+  /* Toggle mobile menu */
+  function toggleMenu() {
+    if (menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+    } else {
+      menu.classList.add("active");
+      toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+    }
+  }
+
+  /* Activate Submenu */
+  function toggleItem() {
+    if (this.classList.contains("submenu-active")) {
+      this.classList.remove("submenu-active");
+    } else if (menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
+      this.classList.add("submenu-active");
+    } else {
+      this.classList.add("submenu-active");
+    }
+  }
+
+  /* Close Submenu From Anywhere */
+  function closeSubmenu(e) {
+    if (menu.querySelector(".submenu-active")) {
+      let isClickInside = menu
+        .querySelector(".submenu-active")
+        .contains(e.target);
+
+      if (!isClickInside && menu.querySelector(".submenu-active")) {
+        menu.querySelector(".submenu-active").classList.remove("submenu-active");
+      }
+    }
+  }
+  /* Event Listeners */
+  toggle.addEventListener("click", toggleMenu, false);
+  for (let item of items) {
+    if (item.querySelector(".submenu")) {
+      item.addEventListener("click", toggleItem, false);
+    }
+    item.addEventListener("keypress", toggleItem, false);
+  }
+  document.addEventListener("click", closeSubmenu, false);
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var searchLink = document.querySelector('a[href="#search"]');
+    var searchContainer = document.getElementById('search');
+    var searchInput = document.querySelector('#search > form > input[type="search"]');
+    var closeButton = document.querySelector('#search button.close');
+
+    // Click event for the search link
+    searchLink.addEventListener('click', function (event) {
+      searchContainer.classList.add('open');
+      searchInput.focus();
+    });
+
+    // Click and keyup events for the search container and close button
+    searchContainer.addEventListener('click', function (event) {
+      if (
+        event.target === this ||
+        event.target.className === 'close' ||
+        event.keyCode === 27
+      ) {
+        searchContainer.classList.remove('open');
+      }
+    });
+
+    closeButton.addEventListener('click', function (event) {
+      searchContainer.classList.remove('open');
+    });
+
+    // Keyup event for the document to close the search on the 'Esc' key
+    document.addEventListener('keyup', function (event) {
+      if (event.keyCode === 27) {
+        searchContainer.classList.remove('open');
+      }
+    });
+  });
+
+</script>
+
+</html>

@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^news-details/(.*)$ latest-news-details.php?title=$1 [NC]
+RewriteRule ^contact-us$ contact-page.php [NC]
+
+
